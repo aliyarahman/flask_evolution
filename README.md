@@ -2,5 +2,6 @@
 flask_evolution - Our Flask learning app
 ==========================
 
-We've added one small feature to the bare bones Flask app.
-This app now renders an .html template and styles it using CSS.
+At this point, our app is capable of rendering templates using template inheritance so we don't have to keep retyping the head of the HTML files.
+
+
