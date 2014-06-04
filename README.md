@@ -1,5 +1,7 @@
 ========================
-swampr - This app says hello in the browser!
+flask_evolution - Our Flask learning app
 ==========================
 
-This is the most basic form of a Flask app - it runs, and it displays something in the browser.
+We've added one small feature to the bare bones Flask app.
+This app now renders an .html template in the browser, instead
+of just returning text.
