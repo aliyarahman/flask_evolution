@@ -1,6 +1,21 @@
 {% extends "base.html" %}	<!-- Here we're inheriting the base.html template so we don't have to retype the header and footer on this or other content pages -->
 {% block content %}		<!-- Corresponds to the same tag on the base.html template - essentially saying "insert here" -->
-			<h1> We're now loading a template!</h1>
 
+	<h1>Our current users are:</h1>
+		{% for u in users %}
+			<div class="userholder">
+				<span class="usertitle">{{u.username}}</span>
+				<br>({{u.firstname}} {{u.lastname}})
+			</div>
+		{% endfor %}
+
+		<br>
+	<h1>Posts we have so far </h1>
+		{% for p in posts %}
+			<div class="postholder">
+				<span class="posttitle">{{p.title}}</span>
+				<br><br> {{p.content}}
+			</div>
+		{% endfor %}		
 		
 {% endblock %} <!-- Basically says "now go back to the base.html template to finish the page" -->

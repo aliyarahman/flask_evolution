@@ -1,1 +1,11 @@
-h1	{color: #AEBE37 }
+body 	{margin-left: 200px; margin-right: 200px; font-family: Helvetica;}
+
+h1	{color: #AEBE37}
+
+div.userholder, div.postholder	{margin: 20px; padding:15px; border-radius: 15px;}
+
+div.userholder	{background-color: #AEBE37}
+
+div.postholder	{background-color:#686868}
+
+span.usertitle, span.posttitle	{color: white; font-family: Impact; font-size: 24px;}
