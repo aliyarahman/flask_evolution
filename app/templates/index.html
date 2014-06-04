@@ -1,15 +1,6 @@
-<!doctype html>
-
-<html>
-        <head>
-                <title>The Evolution of a Flask app</title>
-		 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-        </head>
-
-		<body>
+{% extends "base.html" %}	<!-- Here we're inheriting the base.html template so we don't have to retype the header and footer on this or other content pages -->
+{% block content %}		<!-- Corresponds to the same tag on the base.html template - essentially saying "insert here" -->
 			<h1> We're now loading a template!</h1>
+
 		
-
-		</body>
-
-</html>
+{% endblock %} <!-- Basically says "now go back to the base.html template to finish the page" -->
