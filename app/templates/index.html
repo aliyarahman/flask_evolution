@@ -8,6 +8,7 @@
 				<br>({{u.firstname}} {{u.lastname}})
 			</div>
 		{% endfor %}
+		<br> <a href="{{ url_for('add_user')}}">Add a new user</a>
 
 		<br>
 	<h1>Posts we have so far </h1>
@@ -18,4 +19,7 @@
 			</div>
 		{% endfor %}		
 		
+                <br> <a href="{{ url_for('add_post')}}">Add a new post</a>
+		
+
 {% endblock %} <!-- Basically says "now go back to the base.html template to finish the page" -->
