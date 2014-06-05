@@ -1,11 +1,15 @@
-class User:
-	def __init__(self, firstname, lastname, username):
-		self.firstname = firstname
-		self.lastname = lastname
-		self.username = username
+from app import db
 
-class Post:
-	def __init__(self, title, content, author_id):
-		self.title = title
-		self.content = content
-		self.author_id = author_id
+
+class User(db.Model):
+	id = db.Column(db.Integer, primary_key = True)
+	firstname = db.Column(db.String(64))
+	lastname = db.Column(db.String(64))
+	username = db.Column(db.String(120), unique = True)
+	posts = db.relationship('Post', backref = 'author')
+
+class Post(db.Model):
+	id = db.Column(db.Integer, primary_key = True)
+	title = db.Column(db.String(100))
+	content = db.Column(db.Text)
+	author_id = db.Column(db.Integer, db.ForeignKey('user.id'))

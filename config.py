@@ -1,2 +1,3 @@
-# This configuration file is blank right now because this
-# app is not that fancy yet!
+# Tell the app where to find the database
+
+SQLALCHEMY_DATABASE_URI = 'postgresql://aliya:Popcorn13@localhost/flask_evolution'
