@@ -14,12 +14,13 @@
 	<h1>Posts we have so far </h1>
 		{% for p in posts %}
 			<div class="postholder">
-				<span class="posttitle">{{p.title}}</span>
+				<span class="posttitle">{{p.title}} - by {{p.author.username}}</span>
 				<br><br> {{p.content}}
 			</div>
 		{% endfor %}		
 		
                 <br> <a href="{{ url_for('add_post')}}">Add a new post</a>
+                <br> <a href="{{ url_for('logout')}}">Logout</a>
 		
 
 {% endblock %} <!-- Basically says "now go back to the base.html template to finish the page" -->

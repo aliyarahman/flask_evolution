@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<h2>Log in</h2>
+
+        <div class="loginerror">
+                {% if form.errors %}
+                <p style="color:red">Looks like there's something missing:<br />
+                        {% for field_name, field_errors in form.errors|dictsort if field_errors %}
+                                {% for error in field_errors %}
+                                <br /><span style="margin-left:15px">- {{ error }}</span>
+                                {% endfor %}
+                        {% endfor %}
+                </p>
+                {% endif %}
+        </div>
+
+
+	<form action="" method="post" name="login">
+		{{form.hidden_tag()}}
+		<p>Username {{form.username(size=30)}}</p>
+		<p>Password{{form.password(size=30)}}</p>
+		<p><button type="submit" value="LOG IN">LOG IN</button>
+		<p><a href="{{ url_for('add_user')}}"><u>Sign up</a></u>.</p>
+	</form>
+
+		
+{%endblock %}
+
